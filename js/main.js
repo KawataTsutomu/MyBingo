@@ -23,5 +23,12 @@
     colomns[4] = createColumn(4);
     colomns[2][2] = 'FREE';
 
-    console.table(colomns);
+    const bingo = [];
+    for (let row = 0; row < 5; row++) {
+        bingo[row] = [];
+        for (let col = 0; col < 5; col++) {
+            bingo[row][col] = colomns[col][row];
+        }
+    }
+    console.table(bingo);
 }
