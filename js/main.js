@@ -31,4 +31,17 @@
         }
     }
     console.table(bingo);
+
+    for (let row = 0; row < 5; row++) {
+        // tr要素を作成
+        const tr = document.createElement('tr');
+        for (let col = 0; col < 5; col++) {
+            // td要素を作成
+            const td = document.createElement('td');
+            // tdの中身の要素を指定
+            td.textContent = bingo[row][col];
+            tr.appendChild(td);
+        }
+        document.querySelector('tbody').appendChild(tr);
+    }
 }
